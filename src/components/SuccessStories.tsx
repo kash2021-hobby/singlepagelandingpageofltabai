@@ -57,7 +57,7 @@ const achievements = [
   },
   {
     icon: Award,
-    number: '5+',
+    number: '10+',
     label: 'Years Experience',
     description: 'Proven track record of success'
   }
