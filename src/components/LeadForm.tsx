@@ -123,6 +123,18 @@ Time: ${currentTime}`;
       
       // Show success message
       setSubmitStatus('success');
+      
+      // Track Meta Pixel Lead event
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'Contact Form Submission',
+          content_category: 'Lead Generation',
+          value: 1,
+          currency: 'INR'
+        });
+        console.log('📊 Meta Pixel Lead event tracked');
+      }
+      
       setFormData({
         name: '',
         phone: '',
