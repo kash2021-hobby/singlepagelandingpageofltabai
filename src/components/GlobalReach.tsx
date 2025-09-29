@@ -49,7 +49,7 @@ const globalStats = [
   {
     icon: Users,
     number: '400+',
-    label: 'International Clients',
+    label: 'International Projects',
     description: 'Businesses served worldwide'
   },
   {
