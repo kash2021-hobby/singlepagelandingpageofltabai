@@ -230,35 +230,39 @@ Please follow up with this potential client ASAP! 🎯`;
                 </div>
               </div>
 
-              {submitStatus === 'error' && (
-                <div className="flex items-center space-x-2 text-red-600 bg-red-50 p-4 rounded-lg">
+                  WhatsApp has opened with your details pre-filled. Please click the "Send" button 
+                  in WhatsApp to send us your information, and we'll contact you immediately!
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   <span className="text-sm">{errorMessage}</span>
                 </div>
-              )}
+                    📱 WhatsApp opened with your details. Please click "Send" in WhatsApp to complete!
 
               <div className="text-center">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="group bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? (
                     <>
                       <Loader className="w-5 h-5 mr-2 animate-spin" />
-                      Sending to WhatsApp...
+                      Opening WhatsApp...
                     </>
                   ) : (
                     <>
-                      Send to WhatsApp
+                      📱 Open WhatsApp & Send Details
                       <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
                 </button>
                 
-                <div className="mt-4 flex items-center justify-center space-x-2 text-sm text-gray-500">
-                  <span>📱</span>
-                  <span>Leads sent directly to: +91 9164060961</span>
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-gray-600 mb-2">
+                    ✅ WhatsApp will open with your details pre-filled
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    Just click "Send" in WhatsApp to complete your request!
+                  </p>
                 </div>
                 <p className="text-sm text-gray-500 mt-2">
                   * Required fields. We respect your privacy and will never share your information.
