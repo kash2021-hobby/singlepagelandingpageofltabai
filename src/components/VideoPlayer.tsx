@@ -24,7 +24,8 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
   const youtubeUrl = `https://youtube.com/shorts/${videoId}`;
 
   return (
-    <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900">
+    <div className="w-full" style={{ aspectRatio: '16/9' }}>
+      <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900">
       {!isLoaded && !hasError ? (
         // Custom Thumbnail with Play Button
         <div className="relative w-full h-full group cursor-pointer" onClick={handleLoadVideo}>
@@ -78,6 +79,7 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
           loading="lazy"
         />
       )}
+      </div>
     </div>
   );
 }

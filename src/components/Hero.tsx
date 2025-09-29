@@ -40,11 +40,13 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <p className="text-blue-100">Learn how Ltabai transforms businesses with AI-powered solutions</p>
               </div>
               
-              <VideoPlayer
-                videoId="e88VETuRWBs"
-                title="Ltabai - AI-Powered Digital Solutions"
-                description="Discover how we've helped 500+ businesses grow"
-              />
+              <div className="w-full max-w-3xl mx-auto">
+                <VideoPlayer
+                  videoId="e88VETuRWBs"
+                  title="Ltabai - AI-Powered Digital Solutions"
+                  description="Discover how we've helped 500+ businesses grow"
+                />
+              </div>
               
               <div className="text-center mt-4">
                 <p className="text-blue-200 text-sm">
