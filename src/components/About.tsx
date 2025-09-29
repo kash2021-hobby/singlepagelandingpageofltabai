@@ -2,11 +2,6 @@ import { Award, Shield, Clock, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: Award,
-    title: 'Trusted Partner',
-    description: '10+ years of experience delivering exceptional digital marketing results for businesses across industries.'
-  },
-  {
     icon: Shield,
     title: 'Trusted Partner',
     description: 'We prioritize transparency, reliability, and long-term partnerships with our clients.'
