@@ -83,7 +83,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               <div className="text-sm text-blue-200">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">5+</div>
+              <div className="text-3xl font-bold text-yellow-400">10+</div>
               <div className="text-sm text-blue-200">Years Experience</div>
             </div>
           </div>
