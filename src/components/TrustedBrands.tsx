@@ -3,17 +3,17 @@ import { Building2 } from 'lucide-react';
 const brands = [
   {
     name: 'Tata',
-    logo: '/tata.jpg',
+    logo: '/tata jpg.png',
     category: 'Conglomerate'
   },
   {
     name: 'Yamaha',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/06/Yamaha-Logo.png',
+    logo: '/yamaha.jpg',
     category: 'Automotive'
   },
   {
     name: 'TVS Motors',
-    logo: 'https://logos-world.net/wp-content/uploads/2021/11/TVS-Motor-Logo.png',
+    logo: '/tvs motors.jpg',
     category: 'Automotive'
   },
   {
@@ -38,7 +38,7 @@ const brands = [
   },
   {
     name: 'Dermanext',
-    logo: 'https://via.placeholder.com/200x80/4F46E5/FFFFFF?text=DERMANEXT',
+    logo: '/derma next.jpg',
     category: 'Healthcare'
   },
   {
