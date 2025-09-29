@@ -79,9 +79,25 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      // Check if response is ok before parsing JSON
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Server response error:', errorText);
+        throw new Error(`Server error: ${response.status} - ${errorText}`);
+      }
+
+      // Parse JSON response
+      let result;
+      try {
+        const responseText = await response.text();
+        console.log('Raw response:', responseText);
+        result = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error('JSON parsing error:', parseError);
+        throw new Error('Invalid response from server. Please try again.');
+      }
       
-      if (response.ok && result.success) {
+      if (result.success) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -90,13 +106,17 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
           location: ''
         });
         
-        // Optional: Open WhatsApp in a new tab for immediate follow-up
+        // Log success for debugging
+        console.log('✅ Lead submitted successfully:', result);
+        
+        // Open WhatsApp in a new tab for immediate follow-up
         if (result.whatsappUrl) {
-          // Uncomment the line below if you want to auto-open WhatsApp
-          // window.open(result.whatsappUrl, '_blank');
+          setTimeout(() => {
+            window.open(result.whatsappUrl, '_blank');
+          }, 1000); // Open WhatsApp after 1 second
         }
       } else {
-        throw new Error(result.error || 'Failed to submit form');
+        throw new Error(result.error || 'Failed to submit form. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);

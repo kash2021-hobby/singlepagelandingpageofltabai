@@ -1,5 +1,6 @@
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
@@ -17,12 +18,13 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { name, phone, businessName, location }: LeadData = await req.json()
-
-    // Validate required fields
-    if (!name || !phone || !businessName || !location) {
+    // Check if request has body
+    if (!req.body) {
       return new Response(
-        JSON.stringify({ error: 'All fields are required' }),
+        JSON.stringify({ 
+          success: false, 
+          error: 'No data provided' 
+        }),
         { 
           status: 400, 
           headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
@@ -30,50 +32,92 @@ Deno.serve(async (req) => {
       )
     }
 
+    // Parse JSON data
+    let leadData: LeadData;
+    try {
+      leadData = await req.json();
+    } catch (parseError) {
+      console.error('JSON parsing error:', parseError);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: 'Invalid JSON data provided' 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      )
+    }
+
+    const { name, phone, businessName, location } = leadData;
+
+    // Validate required fields
+    if (!name || !phone || !businessName || !location) {
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: 'All fields are required (name, phone, businessName, location)' 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      )
+    }
+
+    // Clean phone number (remove any non-digits)
+    const cleanPhone = phone.replace(/\D/g, '');
+    
     // Format the message for WhatsApp
     const message = `🚀 *New Lead from Ltabai Website*
 
 👤 *Name:* ${name}
-📱 *Phone:* ${phone}
+📱 *Phone:* +91 ${cleanPhone}
 🏢 *Business:* ${businessName}
 📍 *Location:* ${location}
 
-*Time:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+*Submitted:* ${new Date().toLocaleString('en-IN', { 
+  timeZone: 'Asia/Kolkata',
+  dateStyle: 'medium',
+  timeStyle: 'short'
+})}
 
-Please follow up with this potential client!`
+Please follow up with this potential client ASAP! 🎯`;
 
     // Create WhatsApp URL for direct messaging
     const whatsappNumber = '919164060961'; // Your WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    // Log the lead data for your records
-    console.log('New lead received:', { 
+    // Log the lead data for debugging
+    console.log('✅ New lead received:', { 
       name, 
-      phone, 
+      phone: cleanPhone, 
       businessName, 
       location, 
       timestamp: new Date().toISOString() 
     });
     
-    console.log('WhatsApp message prepared:', message);
-    console.log('WhatsApp URL:', whatsappUrl);
+    console.log('📱 WhatsApp message prepared successfully');
+    console.log('🔗 WhatsApp URL generated:', whatsappUrl.substring(0, 100) + '...');
 
-    // In a production environment, you could also:
-    // 1. Store the lead in a database
-    // 2. Send email notifications
-    // 3. Integrate with CRM systems
-    // 4. Use WhatsApp Business API for automated sending
+    // Return success response with proper JSON structure
+    const responseData = {
+      success: true,
+      message: 'Lead submitted successfully! Check your WhatsApp for the lead details.',
+      data: {
+        name,
+        phone: cleanPhone,
+        businessName,
+        location,
+        submittedAt: new Date().toISOString()
+      },
+      whatsappUrl: whatsappUrl
+    };
 
-    // For now, we'll return success with the WhatsApp URL
-    // The frontend can optionally use this URL to open WhatsApp
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: 'Lead submitted successfully! You will be contacted via WhatsApp shortly.',
-        whatsappUrl: whatsappUrl,
-        leadData: { name, phone, businessName, location }
-      }),
+      JSON.stringify(responseData),
       { 
         status: 200, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
@@ -81,11 +125,17 @@ Please follow up with this potential client!`
     )
 
   } catch (error) {
-    console.error('Error processing lead:', error)
+    console.error('❌ Error processing lead:', error);
+    
+    // Return proper error response
+    const errorResponse = {
+      success: false,
+      error: 'Internal server error. Please try again or contact us directly at +91 9164060961.',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    };
+
     return new Response(
-      JSON.stringify({ 
-        error: 'Internal server error. Please try again or contact us directly at +91 9164060961.' 
-      }),
+      JSON.stringify(errorResponse),
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
