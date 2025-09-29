@@ -70,10 +70,17 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 
     try {
       // Call the Supabase Edge Function to send data to WhatsApp
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-lead`, {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      
+      if (!supabaseUrl || !supabaseKey) {
+        throw new Error('Supabase configuration missing. Please set up your Supabase project first.');
+      }
+      
+      const response = await fetch(`${supabaseUrl}/functions/v1/submit-lead`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Authorization': `Bearer ${supabaseKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
@@ -81,9 +88,12 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 
       // Check if response is ok before parsing JSON
       if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error('Supabase Edge Function not found. Please set up your Supabase project and deploy the edge function.');
+        }
         const errorText = await response.text();
-        console.error('Server response error:', errorText);
-        throw new Error(`Server error: ${response.status} - ${errorText}`);
+        console.error('Server response error:', response.status, errorText);
+        throw new Error(`Server error: ${response.status}. Please check your Supabase configuration.`);
       }
 
       // Parse JSON response
