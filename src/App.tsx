@@ -3,6 +3,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import TrustedBrands from './components/TrustedBrands';
 import Services from './components/Services';
+import WhatYouGet from './components/WhatYouGet';
+import SuccessStories from './components/SuccessStories';
+import GlobalReach from './components/GlobalReach';
 import About from './components/About';
 import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
@@ -24,6 +27,9 @@ function App() {
         <Hero onGetStarted={scrollToContact} />
         <TrustedBrands />
         <Services />
+        <WhatYouGet />
+        <SuccessStories />
+        <GlobalReach />
         <About />
         <LeadForm id="contact" />
       </main>
