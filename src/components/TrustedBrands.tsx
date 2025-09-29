@@ -105,7 +105,7 @@ export default function TrustedBrands() {
                 <img
                   src={brand.logo}
                   alt={`${brand.name} logo`}
-                  className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                  className="max-w-full max-h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://via.placeholder.com/200x80/4F46E5/FFFFFF?text=${brand.name.replace(' ', '+')}`;
