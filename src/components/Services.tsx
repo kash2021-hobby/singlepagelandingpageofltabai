@@ -68,11 +68,6 @@ export default function Services() {
                         alt="Professional Video Marketing & AI Ads"
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <p className="text-white font-semibold text-sm drop-shadow-lg">Professional Video Production</p>
-                        <p className="text-white/90 text-xs drop-shadow-md">AI-Powered Content Creation</p>
-                      </div>
                     </div>
                   ) : (
                     // Other services - Keep the placeholder
