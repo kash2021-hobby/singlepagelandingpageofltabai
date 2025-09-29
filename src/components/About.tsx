@@ -74,23 +74,6 @@ export default function About() {
                   <span>Transparent reporting and regular communication</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Customized strategies for your unique business needs</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Continuous optimization and improvement</span>
-                </div>
-              </div>
-              
-              <div className="mt-8 pt-6 border-t border-blue-500">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">98%</div>
-                  <div className="text-sm">Client Satisfaction Rate</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
