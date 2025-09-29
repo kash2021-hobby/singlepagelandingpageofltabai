@@ -3,8 +3,8 @@ import { Award, Shield, Clock, Users } from 'lucide-react';
 const features = [
   {
     icon: Award,
-    number: '10+',
-    description: '5+ years of experience delivering exceptional digital marketing results for businesses across industries.'
+    title: 'Proven expertise',
+    description: '10+ years of experience delivering exceptional digital marketing results for businesses across industries.'
   },
   {
     icon: Shield,
