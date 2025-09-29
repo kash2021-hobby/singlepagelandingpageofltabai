@@ -1,0 +1,63 @@
+import { Phone, Mail, MapPin, Zap } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="bg-blue-600 p-2 rounded-lg">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold">Ltabai</span>
+            </div>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Empowering businesses with innovative digital marketing solutions 
+              that drive growth and success in the digital age.
+            </p>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">+91 9164060961</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">info@ltabai.in</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">India</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>Website Development</li>
+              <li>SEO Optimization</li>
+              <li>Social Media Marketing</li>
+              <li>Google Ads Management</li>
+              <li>Content Marketing</li>
+              <li>Video Editing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Ltabai. All rights reserved. | Transforming businesses through digital excellence.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
