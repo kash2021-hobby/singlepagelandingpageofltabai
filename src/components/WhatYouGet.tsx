@@ -49,7 +49,7 @@ export default function WhatYouGet() {
             <span className="text-blue-600 font-semibold text-sm">VALUE PROPOSITION</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            What You <span className="text-blue-600">Get</span> with Ltabai
+            What You <span className="text-blue-600">Get</span> with Ltab ai
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             When you partner with us, you're not just getting a service provider – 
@@ -90,7 +90,7 @@ export default function WhatYouGet() {
         <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Experience the Ltabai Difference?
+              Ready to Experience the Ltab ai Difference?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join hundreds of successful businesses who have transformed their digital presence with our AI-powered solutions.

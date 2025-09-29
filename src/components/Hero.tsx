@@ -43,7 +43,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               <div className="w-full">
                 <VideoPlayer
                   videoId="e88VETuRWBs"
-                  title="Ltabai - AI-Powered Digital Solutions"
+                  title="Ltab ai - AI-Powered Digital Solutions"
                   description="Discover how we've helped 500+ businesses grow"
                 />
               </div>

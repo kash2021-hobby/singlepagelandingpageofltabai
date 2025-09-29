@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="/470684103_2153992445004137_800651311874232813_n.jpg" 
-                alt="Ltabai Logo" 
+                alt="Ltab ai Logo" 
                 className="w-10 h-10 rounded-lg object-contain bg-white p-1"
               />
-              <span className="text-2xl font-bold">Ltabai</span>
+              <span className="text-2xl font-bold">Ltab ai</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading digital marketing agency in Guwahati, Assam. Empowering local businesses 
@@ -56,7 +56,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Ltabai - Digital Marketing Services in Guwahati, Assam. All rights reserved. | Transforming Northeast India businesses through digital excellence.
+            © 2024 Ltab ai - Digital Marketing Services in Guwahati, Assam. All rights reserved. | Transforming Northeast India businesses through digital excellence.
           </p>
         </div>
       </div>

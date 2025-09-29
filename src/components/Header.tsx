@@ -23,10 +23,10 @@ export default function Header({ onContactClick }: HeaderProps) {
           <div className="flex items-center space-x-2">
             <img 
               src="/470684103_2153992445004137_800651311874232813_n.jpg" 
-              alt="Ltabai Logo" 
+              alt="Ltab ai Logo" 
               className="w-10 h-10 rounded-lg object-contain"
             />
-            <span className="text-2xl font-bold text-gray-900">Ltabai</span>
+            <span className="text-2xl font-bold text-gray-900">Ltab ai</span>
           </div>
 
           {/* Desktop Navigation */}

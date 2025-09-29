@@ -1,6 +1,6 @@
-# Ltabai Lead Generation Landing Page
+# Ltab ai Lead Generation Landing Page
 
-A beautiful, responsive landing page for Ltabai's digital marketing services with direct WhatsApp lead integration.
+A beautiful, responsive landing page for Ltab ai's digital marketing services with direct WhatsApp lead integration.
 
 ## 🚀 Features
 
@@ -22,7 +22,7 @@ A beautiful, responsive landing page for Ltabai's digital marketing services wit
 
 ### WhatsApp Message Format:
 ```
-🚀 *New Lead from Ltabai Website*
+🚀 *New Lead from Ltab ai Website*
 
 👤 *Name:* [Customer Name]
 📱 *Phone:* +91 [Phone Number]
