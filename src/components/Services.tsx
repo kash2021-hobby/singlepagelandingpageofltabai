@@ -69,6 +69,15 @@ export default function Services() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  ) : index === 1 ? (
+                    // Social Media Marketing Service - Use the professional image
+                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                      <img
+                        src="/guwahati.png"
+                        alt="Social Media Marketing Services in Guwahati"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   ) : (
                     // Other services - Keep the placeholder
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl h-64 flex items-center justify-center relative overflow-hidden border border-blue-100">
