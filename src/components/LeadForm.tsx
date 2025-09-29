@@ -92,7 +92,7 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 Please follow up with this potential client ASAP! 🎯`;
 
       // Create WhatsApp URL for direct messaging
-      const whatsappNumber = '6000683808'; // Your WhatsApp number
+      const whatsappNumber = '+91-6000683808'; // Your WhatsApp number
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
       
@@ -122,7 +122,7 @@ Please follow up with this potential client ASAP! 🎯`;
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-      setErrorMessage('Something went wrong. Please try again or contact us directly at https://wa.me/6000683808.');
+      setErrorMessage('Something went wrong. Please try again or contact us directly at https://wa.me/+91-6000683808.');
     } finally {
       setIsSubmitting(false);
     }
