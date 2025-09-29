@@ -33,7 +33,7 @@ export default function About() {
               Why Choose <span className="text-blue-600">Ltabai</span>?
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              At Ltabai, we're not just another digital marketing agency. We're your growth partners, 
+              10+ years of experience delivering exceptional digital marketing results for businesses across industries.
               dedicated to transforming your business through innovative digital solutions and 
               data-driven strategies.
             </p>
