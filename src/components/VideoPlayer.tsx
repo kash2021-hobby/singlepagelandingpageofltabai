@@ -24,8 +24,11 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
   const youtubeUrl = `https://youtube.com/shorts/${videoId}`;
 
   return (
-    <div className="w-full max-w-5xl mx-auto" style={{ aspectRatio: '16/9' }}>
-      <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900 transform hover:scale-[1.02] transition-transform duration-300">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-0">
+      <div 
+        className="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900 transform hover:scale-[1.02] transition-transform duration-300"
+        style={{ aspectRatio: '16/9' }}
+      >
       {!isLoaded && !hasError ? (
         // Custom Thumbnail with Play Button
         <div className="relative w-full h-full group cursor-pointer" onClick={handleLoadVideo}>
@@ -36,31 +39,31 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
             onError={handleError}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/40 transition-all duration-300 flex items-center justify-center">
-            <div className="bg-red-600 hover:bg-red-700 rounded-full p-6 group-hover:scale-110 transition-all duration-300 shadow-2xl">
-              <Play className="w-12 h-12 text-white ml-1" fill="currentColor" />
+            <div className="bg-red-600 hover:bg-red-700 rounded-full p-4 sm:p-6 group-hover:scale-110 transition-all duration-300 shadow-2xl">
+              <Play className="w-8 h-8 sm:w-12 sm:h-12 text-white ml-1" fill="currentColor" />
             </div>
           </div>
-          <div className="absolute bottom-6 left-6 right-6">
-            <h4 className="text-white font-bold text-xl mb-2 drop-shadow-lg">{title}</h4>
-            <p className="text-white/90 text-base drop-shadow-md">{description}</p>
+          <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6">
+            <h4 className="text-white font-bold text-lg sm:text-xl mb-1 sm:mb-2 drop-shadow-lg">{title}</h4>
+            <p className="text-white/90 text-sm sm:text-base drop-shadow-md">{description}</p>
           </div>
         </div>
       ) : hasError ? (
         // Error Fallback
-        <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center text-white p-12">
+        <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center text-white p-6 sm:p-12">
           <div className="text-center">
-            <div className="bg-red-600 rounded-full p-6 mb-6 mx-auto w-fit">
-              <ExternalLink className="w-10 h-10" />
+            <div className="bg-red-600 rounded-full p-4 sm:p-6 mb-4 sm:mb-6 mx-auto w-fit">
+              <ExternalLink className="w-6 h-6 sm:w-10 sm:h-10" />
             </div>
-            <h4 className="text-2xl font-bold mb-3">Video Not Available</h4>
-            <p className="text-gray-300 mb-8 text-lg">Watch our story directly on YouTube</p>
+            <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Video Not Available</h4>
+            <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">Watch our story directly on YouTube</p>
             <a
               href={youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
               Watch on YouTube
