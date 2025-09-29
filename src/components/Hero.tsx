@@ -33,14 +33,14 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </p>
           
           {/* Business Explainer Video Section */}
-          <div className="mb-12 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div className="mb-12 max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold text-white mb-2">Watch Our Story</h3>
-                <p className="text-blue-100">Learn how Ltabai transforms businesses with AI-powered solutions</p>
+                <h3 className="text-3xl font-bold text-white mb-3">Watch Our Story</h3>
+                <p className="text-blue-100 text-lg">Learn how Ltabai transforms businesses with AI-powered solutions</p>
               </div>
               
-              <div className="w-full max-w-3xl mx-auto">
+              <div className="w-full">
                 <VideoPlayer
                   videoId="e88VETuRWBs"
                   title="Ltabai - AI-Powered Digital Solutions"
@@ -48,8 +48,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 />
               </div>
               
-              <div className="text-center mt-4">
-                <p className="text-blue-200 text-sm">
+              <div className="text-center mt-6">
+                <p className="text-blue-200 text-base">
                   🎥 Discover how we've helped 500+ businesses grow with AI-powered solutions
                 </p>
               </div>
