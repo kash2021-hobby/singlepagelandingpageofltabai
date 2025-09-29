@@ -33,7 +33,7 @@ export default function About() {
               Why Choose <span className="text-blue-600">Ltabai</span>?
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              10+ years of experience delivering exceptional digital marketing results for businesses across industries.
+              5+ years of experience delivering exceptional digital marketing results for businesses across industries.
               dedicated to transforming your business through innovative digital solutions and 
               data-driven strategies.
             </p>
@@ -52,7 +52,7 @@ export default function About() {
                       <IconComponent className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">{feature.number || feature.title}</h3>
                       <p className="text-sm text-gray-600">{feature.description}</p>
                     </div>
                   </div>

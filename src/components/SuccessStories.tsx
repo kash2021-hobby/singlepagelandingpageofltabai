@@ -16,6 +16,7 @@ const successStories = [
   },
   {
     company: 'Bene Kleed',
+    company: 'Bene Cleed',
     industry: 'Fashion',
     result: '250% boost in social media engagement',
     description: 'Automated social media campaigns and AI video ads drove massive engagement and sales.',
@@ -57,7 +58,7 @@ const achievements = [
   },
   {
     icon: Award,
-    number: '10+',
+    number: '5+',
     label: 'Years Experience',
     description: 'Proven track record of success'
   }
