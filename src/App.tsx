@@ -26,11 +26,11 @@ function App() {
       <main>
         <Hero onGetStarted={scrollToContact} />
         <TrustedBrands />
+        <GlobalReach />
         <Services />
         <WhatYouGet />
         <SuccessStories />
         <About />
-        <GlobalReach />
         <LeadForm id="contact" />
       </main>
       <Footer />
