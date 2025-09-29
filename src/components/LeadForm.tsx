@@ -230,7 +230,7 @@ Please follow up with this potential client ASAP! 🎯`;
                 </div>
               </div>
 
-                  WhatsApp has opened with your details pre-filled. Please click the "Send" button 
+                  WhatsApp has opened with your details pre-filled. Please click the "Send\" button 
                   in WhatsApp to send us your information, and we'll contact you immediately!
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   <span className="text-sm">{errorMessage}</span>
