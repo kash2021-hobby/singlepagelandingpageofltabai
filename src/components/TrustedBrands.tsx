@@ -42,7 +42,7 @@ const brands = [
     category: 'Healthcare'
   },
   {
-    name: 'Bene Cleed',
+    name: 'Bene Kleed',
     logo: '/bene kleed.png',
     category: 'Fashion'
   },

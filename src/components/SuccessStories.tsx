@@ -15,7 +15,7 @@ const successStories = [
     avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=64&h=64&fit=crop&crop=face'
   },
   {
-    company: 'Bene Cleed',
+    company: 'Bene Kleed',
     industry: 'Fashion',
     result: '250% boost in social media engagement',
     description: 'Automated social media campaigns and AI video ads drove massive engagement and sales.',
