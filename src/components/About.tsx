@@ -74,6 +74,12 @@ export default function About() {
                   <span>Transparent reporting and regular communication</span>
                 </div>
                 <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  <span>Dedicated support and continuous optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
