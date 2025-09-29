@@ -89,15 +89,13 @@ export default function Services() {
                     </div>
                   ) : (
                     // Other services - Keep the placeholder
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl h-64 flex items-center justify-center relative overflow-hidden border border-blue-100">
-                      <div className="text-center">
-                        <div className="bg-blue-100 p-4 rounded-full mb-4 mx-auto w-fit">
-                          <Video className="w-8 h-8 text-blue-600" />
-                        </div>
-                        <p className="text-sm font-medium text-blue-700">Explainer Video</p>
-                        <p className="text-xs text-blue-500 mt-1">Coming Soon</p>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/10"></div>
+                    // SEO Services - Use the professional image
+                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                      <img
+                        src="/ChatGPT Image Sep 29, 2025, 07_16_53 PM.png"
+                        alt="SEO Services in Guwahati"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   )}
                 </div>
