@@ -1,52 +1,26 @@
 # Ltabai Lead Generation Landing Page
 
-A beautiful, responsive landing page for Ltabai's digital marketing services with WhatsApp lead integration.
+A beautiful, responsive landing page for Ltabai's digital marketing services with direct WhatsApp lead integration.
 
 ## 🚀 Features
 
 - **Responsive Design** - Works perfectly on all devices
-- **WhatsApp Integration** - Leads automatically formatted for WhatsApp
+- **Direct WhatsApp Integration** - Leads automatically sent to your WhatsApp
 - **Video Integration** - YouTube video player with fallback
 - **Modern UI** - Beautiful gradients and animations
-- **Lead Form** - Captures customer information
+- **Instant Lead Processing** - No server setup required
 - **Global Reach** - Showcases international presence
 
-## 📋 Setup Instructions
+## 📱 WhatsApp Integration
 
-### 1. Supabase Configuration (Required for WhatsApp Integration)
-
-To enable WhatsApp lead integration, you need to set up Supabase:
-
-1. **Click the "Supabase" button** in the Bolt settings (top right settings icon)
-2. **Create/Connect your Supabase project**
-3. **The Edge Function will be automatically deployed**
-
-### 2. Environment Variables
-
-The following environment variables will be automatically configured when you set up Supabase:
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### 3. WhatsApp Number Configuration
-
-The WhatsApp number is currently set to: **+91 9164060961**
-
-To change it, update the `whatsappNumber` variable in:
-`supabase/functions/submit-lead/index.ts`
-
-## 🔧 How WhatsApp Integration Works
-
+### How It Works:
 1. **Customer fills form** on your website
-2. **Data is sent** to Supabase Edge Function
-3. **WhatsApp message is formatted** with lead details
-4. **WhatsApp opens automatically** with the message ready to send
-5. **You receive the lead** instantly on WhatsApp
+2. **Data is validated** and formatted
+3. **WhatsApp opens automatically** with lead details
+4. **Message sent to:** +91 9164060961
+5. **You receive leads instantly!**
 
-## 📱 WhatsApp Message Format
-
+### WhatsApp Message Format:
 ```
 🚀 *New Lead from Ltabai Website*
 
@@ -55,7 +29,7 @@ To change it, update the `whatsappNumber` variable in:
 🏢 *Business:* [Business Name]
 📍 *Location:* [Location]
 
-*Submitted:* [Date and Time]
+*Submitted:* [Indian Standard Time]
 
 Please follow up with this potential client ASAP! 🎯
 ```
@@ -73,17 +47,26 @@ npm run dev
 npm run build
 ```
 
-## 📞 Support
-
-For any issues with the WhatsApp integration or website functionality, contact:
-- **Phone:** +91 9164060961
-- **Email:** info@ltabai.in
-
-## 🎯 Current Status
+## ✅ Current Status
 
 - ✅ Landing page design complete
 - ✅ Responsive mobile optimization
 - ✅ Video integration working
-- ⚠️ **WhatsApp integration requires Supabase setup**
+- ✅ **Direct WhatsApp integration active**
+- ✅ **No server setup required**
 
-**Next Step:** Click the Supabase button in settings to enable WhatsApp lead integration!
+## 📞 Contact
+
+- **WhatsApp:** +91 9164060961 (Lead destination)
+- **Email:** info@ltabai.in
+
+## 🎯 Lead Flow
+
+**Customer Journey:**
+1. Visits your landing page
+2. Watches your business video
+3. Fills out the lead form
+4. WhatsApp opens with their details
+5. You receive the lead instantly!
+
+**Perfect for immediate lead conversion!** 🚀

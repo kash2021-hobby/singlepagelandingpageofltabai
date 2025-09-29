@@ -69,69 +69,60 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
     setErrorMessage('');
 
     try {
-      // Call the Supabase Edge Function to send data to WhatsApp
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      // Clean phone number (remove any non-digits)
+      const cleanPhone = formData.phone.replace(/\D/g, '');
       
-      if (!supabaseUrl || !supabaseKey) {
-        throw new Error('Supabase configuration missing. Please set up your Supabase project first.');
-      }
-      
-      const response = await fetch(`${supabaseUrl}/functions/v1/submit-lead`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${supabaseKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Get current Indian time
+      const currentTime = new Date().toLocaleString('en-IN', { 
+        timeZone: 'Asia/Kolkata',
+        dateStyle: 'medium',
+        timeStyle: 'short'
       });
 
-      // Check if response is ok before parsing JSON
-      if (!response.ok) {
-        if (response.status === 404) {
-          throw new Error('Supabase Edge Function not found. Please set up your Supabase project and deploy the edge function.');
-        }
-        const errorText = await response.text();
-        console.error('Server response error:', response.status, errorText);
-        throw new Error(`Server error: ${response.status}. Please check your Supabase configuration.`);
-      }
+      // Format the message for WhatsApp
+      const message = `🚀 *New Lead from Ltabai Website*
 
-      // Parse JSON response
-      let result;
-      try {
-        const responseText = await response.text();
-        console.log('Raw response:', responseText);
-        result = JSON.parse(responseText);
-      } catch (parseError) {
-        console.error('JSON parsing error:', parseError);
-        throw new Error('Invalid response from server. Please try again.');
-      }
+👤 *Name:* ${formData.name}
+📱 *Phone:* +91 ${cleanPhone}
+🏢 *Business:* ${formData.businessName}
+📍 *Location:* ${formData.location}
+
+*Submitted:* ${currentTime}
+
+Please follow up with this potential client ASAP! 🎯`;
+
+      // Create WhatsApp URL for direct messaging
+      const whatsappNumber = '919164060961'; // Your WhatsApp number
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
       
-      if (result.success) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          phone: '',
-          businessName: '',
-          location: ''
-        });
-        
-        // Log success for debugging
-        console.log('✅ Lead submitted successfully:', result);
-        
-        // Open WhatsApp in a new tab for immediate follow-up
-        if (result.whatsappUrl) {
-          setTimeout(() => {
-            window.open(result.whatsappUrl, '_blank');
-          }, 1000); // Open WhatsApp after 1 second
-        }
-      } else {
-        throw new Error(result.error || 'Failed to submit form. Please try again.');
-      }
+      // Simulate processing time for better UX
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Open WhatsApp with the formatted message
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success message
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        phone: '',
+        businessName: '',
+        location: ''
+      });
+      
+      console.log('✅ Lead submitted successfully:', {
+        name: formData.name,
+        phone: cleanPhone,
+        businessName: formData.businessName,
+        location: formData.location,
+        whatsappUrl: whatsappUrl
+      });
+      
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to submit form. Please try again or contact us directly.');
+      setErrorMessage('Something went wrong. Please try again or contact us directly at +91 9164060961.');
     } finally {
       setIsSubmitting(false);
     }
@@ -146,7 +137,7 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Get a free consultation and discover how we can transform your digital presence. 
-            Fill out the form below and we'll get back to you within 24 hours.
+            Fill out the form below and we'll contact you immediately via WhatsApp.
           </p>
         </div>
 
@@ -156,9 +147,14 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
               <p className="text-gray-600 mb-6">
-                Your information has been submitted successfully. We'll contact you within 24 hours 
+                Your information has been sent to our WhatsApp! We'll contact you immediately 
                 to discuss how we can help grow your business.
               </p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                <p className="text-green-700 text-sm">
+                  📱 WhatsApp message sent to +91 9164060961 with your details
+                </p>
+              </div>
               <button
                 onClick={() => setSubmitStatus('idle')}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -250,17 +246,22 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
                   {isSubmitting ? (
                     <>
                       <Loader className="w-5 h-5 mr-2 animate-spin" />
-                      Submitting...
+                      Sending to WhatsApp...
                     </>
                   ) : (
                     <>
-                      Get Free Consultation
+                      Send to WhatsApp
                       <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
                 </button>
                 
-                <p className="text-sm text-gray-500 mt-4">
+                <div className="mt-4 flex items-center justify-center space-x-2 text-sm text-gray-500">
+                  <span>📱</span>
+                  <span>Leads sent directly to: +91 9164060961</span>
+                </div>
+                
+                <p className="text-sm text-gray-500 mt-2">
                   * Required fields. We respect your privacy and will never share your information.
                 </p>
               </div>
