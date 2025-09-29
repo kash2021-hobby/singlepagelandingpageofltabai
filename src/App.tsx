@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TrustedBrands from './components/TrustedBrands';
 import Services from './components/Services';
 import About from './components/About';
 import LeadForm from './components/LeadForm';
@@ -21,6 +22,7 @@ function App() {
       <Header onContactClick={scrollToContact} />
       <main>
         <Hero onGetStarted={scrollToContact} />
+        <TrustedBrands />
         <Services />
         <About />
         <LeadForm id="contact" />
