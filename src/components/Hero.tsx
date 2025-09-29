@@ -29,7 +29,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100 leading-relaxed">
             Transform your business with our comprehensive digital marketing solutions. 
-            From stunning websites to powerful marketing campaigns that helps your business to become more profitable.
+            From stunning websites to powerful marketing campaigns that drive real results.
           </p>
           
           {/* Business Explainer Video Section */}
@@ -83,7 +83,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               <div className="text-sm text-blue-200">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">10+</div>
+              <div className="text-3xl font-bold text-yellow-400">5+</div>
               <div className="text-sm text-blue-200">Years Experience</div>
             </div>
           </div>
