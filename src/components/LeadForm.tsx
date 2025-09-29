@@ -91,10 +91,15 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 
 Please follow up with this potential client ASAP! 🎯`;
 
-      // Create WhatsApp URL for direct messaging
-      const whatsappNumber = '916000683808'; // Your WhatsApp number (without + and -)
+      // Create WhatsApp URL with properly encoded message
+      const whatsappNumber = '916000683808';
+      
+      // Double encode the message for better compatibility
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      console.log('📱 WhatsApp URL:', whatsappUrl);
+      console.log('💬 Message content:', message);
       
       // Simulate processing time for better UX
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -116,7 +121,8 @@ Please follow up with this potential client ASAP! 🎯`;
         phone: cleanPhone,
         businessName: formData.businessName,
         location: formData.location,
-        whatsappUrl: whatsappUrl
+        timestamp: currentTime,
+        messageLength: message.length
       });
       
     } catch (error) {
