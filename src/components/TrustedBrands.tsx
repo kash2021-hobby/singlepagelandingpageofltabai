@@ -3,7 +3,7 @@ import { Building2 } from 'lucide-react';
 const brands = [
   {
     name: 'Tata',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/09/Tata-Logo.png',
+    logo: '/tata.jpg',
     category: 'Conglomerate'
   },
   {
@@ -18,7 +18,7 @@ const brands = [
   },
   {
     name: 'First Abu Dhabi Bank',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/FAB_logo.svg/1200px-FAB_logo.svg.png',
+    logo: '/dubai.png',
     category: 'Banking'
   },
   {
@@ -28,7 +28,7 @@ const brands = [
   },
   {
     name: 'Myntra',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/11/Myntra-Logo.png',
+    logo: '/myntra.jpg',
     category: 'Fashion'
   },
   {
@@ -43,12 +43,12 @@ const brands = [
   },
   {
     name: 'Bene Cleed',
-    logo: 'https://via.placeholder.com/200x80/059669/FFFFFF?text=BENE+CLEED',
+    logo: '/bene kleed.png',
     category: 'Fashion'
   },
   {
     name: 'Minto Bay',
-    logo: 'https://via.placeholder.com/200x80/DC2626/FFFFFF?text=MINTO+BAY',
+    logo: '/minto bay.png',
     category: 'Retail'
   }
 ];
