@@ -220,17 +220,12 @@ Please follow up with this potential client ASAP! 🎯`;
                     onChange={handleInputChange}
                     placeholder="Enter your city/location"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    required
-                  />
-                </div>
-              </div>
-
-                  WhatsApp has opened with your details pre-filled. Please click the "Send\" button 
-                  in WhatsApp to send us your information, and we'll contact you immediately!
+              {submitStatus === 'error' && errorMessage && (
+                <div className="flex items-center text-red-600 bg-red-50 p-4 rounded-lg">
                   <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                   <span className="text-sm">{errorMessage}</span>
                 </div>
-                    📱 WhatsApp opened with your details. Please click "Send" in WhatsApp to complete!
+              )}
 
               <div className="text-center">
                 <button
