@@ -31,6 +31,25 @@ export default function Hero({ onGetStarted }: HeroProps) {
             From stunning websites to powerful marketing campaigns that drive real results.
           </p>
           
+          {/* Business Explainer Video Section */}
+          <div className="mb-12 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="aspect-video bg-gradient-to-br from-blue-800 to-indigo-900 rounded-xl flex items-center justify-center relative overflow-hidden border border-white/20">
+                <div className="text-center">
+                  <div className="bg-white/20 backdrop-blur-sm p-6 rounded-full mb-4 mx-auto w-fit">
+                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Watch Our Story</h3>
+                  <p className="text-blue-100 text-sm">Learn how Ltabai transforms businesses with AI-powered solutions</p>
+                  <p className="text-blue-200 text-xs mt-2">Video coming soon</p>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/30"></div>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={onGetStarted}
