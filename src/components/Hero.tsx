@@ -1,4 +1,5 @@
 import { ArrowRight, Star } from 'lucide-react';
+import VideoPlayer from './VideoPlayer';
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -38,16 +39,13 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <h3 className="text-2xl font-bold text-white mb-2">Watch Our Story</h3>
                 <p className="text-blue-100">Learn how Ltabai transforms businesses with AI-powered solutions</p>
               </div>
-              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/20">
-                <iframe
-                  src="https://www.youtube.com/embed/e88VETuRWBs?si=n40vztXZiiGSTIz3&rel=0&modestbranding=1&showinfo=0"
-                  title="Ltabai - AI-Powered Digital Solutions"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
+              
+              <VideoPlayer
+                videoId="e88VETuRWBs"
+                title="Ltabai - AI-Powered Digital Solutions"
+                description="Discover how we've helped 500+ businesses grow"
+              />
+              
               <div className="text-center mt-4">
                 <p className="text-blue-200 text-sm">
                   🎥 Discover how we've helped 500+ businesses grow with AI-powered solutions
