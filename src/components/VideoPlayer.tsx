@@ -28,9 +28,9 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
       <div 
         className="w-full rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900 transform hover:scale-[1.01] transition-transform duration-300"
         style={{ 
-          aspectRatio: '16/9',
-          minHeight: '300px',
-          height: 'clamp(300px, 60vh, 600px)'
+          aspectRatio: '16/10',
+          minHeight: '400px',
+          height: 'clamp(400px, 70vh, 700px)'
         }}
       >
       {!isLoaded && !hasError ? (
