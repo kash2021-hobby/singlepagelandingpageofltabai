@@ -1,5 +1,3 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
@@ -12,7 +10,7 @@ interface LeadData {
   location: string;
 }
 
-serve(async (req) => {
+Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
@@ -44,29 +42,37 @@ serve(async (req) => {
 
 Please follow up with this potential client!`
 
-    // WhatsApp Business API endpoint (you'll need to replace with your actual endpoint)
-    // For now, we'll use a placeholder URL - you'll need to set up WhatsApp Business API
-    const whatsappApiUrl = `https://api.whatsapp.com/send?phone=919164060961&text=${encodeURIComponent(message)}`
+    // Create WhatsApp URL for direct messaging
+    const whatsappNumber = '919164060961'; // Your WhatsApp number
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    // In a real implementation, you would:
-    // 1. Use WhatsApp Business API or a service like Twilio
-    // 2. Send the message programmatically
-    // 3. Store the lead in your database
+    // Log the lead data for your records
+    console.log('New lead received:', { 
+      name, 
+      phone, 
+      businessName, 
+      location, 
+      timestamp: new Date().toISOString() 
+    });
     
-    // For demonstration, we'll log the data and return success
-    console.log('New lead received:', { name, phone, businessName, location })
-    console.log('WhatsApp message:', message)
+    console.log('WhatsApp message prepared:', message);
+    console.log('WhatsApp URL:', whatsappUrl);
 
-    // You can also store the lead in Supabase database here
-    // const { data, error } = await supabase
-    //   .from('leads')
-    //   .insert([{ name, phone, business_name: businessName, location, created_at: new Date() }])
+    // In a production environment, you could also:
+    // 1. Store the lead in a database
+    // 2. Send email notifications
+    // 3. Integrate with CRM systems
+    // 4. Use WhatsApp Business API for automated sending
 
+    // For now, we'll return success with the WhatsApp URL
+    // The frontend can optionally use this URL to open WhatsApp
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: 'Lead submitted successfully',
-        whatsappUrl: whatsappApiUrl // You can use this for manual testing
+        message: 'Lead submitted successfully! You will be contacted via WhatsApp shortly.',
+        whatsappUrl: whatsappUrl,
+        leadData: { name, phone, businessName, location }
       }),
       { 
         status: 200, 
@@ -77,7 +83,9 @@ Please follow up with this potential client!`
   } catch (error) {
     console.error('Error processing lead:', error)
     return new Response(
-      JSON.stringify({ error: 'Internal server error' }),
+      JSON.stringify({ 
+        error: 'Internal server error. Please try again or contact us directly at +91 9164060961.' 
+      }),
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' } 

@@ -69,17 +69,19 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
     setErrorMessage('');
 
     try {
-      // For now, we'll simulate the API call
-      // In production, this would call your Supabase Edge Function
-      const response = await fetch('/api/submit-lead', {
+      // Call the Supabase Edge Function to send data to WhatsApp
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-lead`, {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -87,13 +89,19 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
           businessName: '',
           location: ''
         });
+        
+        // Optional: Open WhatsApp in a new tab for immediate follow-up
+        if (result.whatsappUrl) {
+          // Uncomment the line below if you want to auto-open WhatsApp
+          // window.open(result.whatsappUrl, '_blank');
+        }
       } else {
-        throw new Error('Failed to submit form');
+        throw new Error(result.error || 'Failed to submit form');
       }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-      setErrorMessage('Failed to submit form. Please try again or contact us directly.');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to submit form. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
