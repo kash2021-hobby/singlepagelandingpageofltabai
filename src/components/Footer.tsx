@@ -16,8 +16,8 @@ export default function Footer() {
               <span className="text-2xl font-bold">Ltabai</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Empowering businesses with innovative digital marketing solutions 
-              that drive growth and success in the digital age.
+              Leading digital marketing agency in Guwahati, Assam. Empowering local businesses 
+              with innovative digital marketing solutions that drive growth across Northeast India.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Ltabai. All rights reserved. | Transforming businesses through digital excellence.
+            © 2024 Ltabai - Digital Marketing Services in Guwahati, Assam. All rights reserved. | Transforming Northeast India businesses through digital excellence.
           </p>
         </div>
       </div>

@@ -30,17 +30,17 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="text-blue-600">Ltabai</span>?
+              Why Choose <span className="text-blue-600">Ltabai</span> for Digital Marketing in Guwahati?
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              10+ years of experience delivering exceptional digital marketing results for businesses across industries.
-              dedicated to transforming your business through innovative digital solutions and 
-              data-driven strategies.
+              Leading digital marketing agency in Guwahati with 10+ years of experience. We specialize in helping 
+              local businesses across Assam and Northeast India grow through proven digital marketing strategies 
+              and AI-powered solutions.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our mission is to empower businesses with cutting-edge digital marketing solutions 
-              that drive measurable results. We combine creativity with analytics to deliver 
-              campaigns that not only look great but perform exceptionally.
+              As Guwahati's trusted digital marketing partner, we understand the local market dynamics 
+              and consumer behavior. Our data-driven approach ensures your business reaches the right 
+              audience at the right time with compelling messages that convert.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

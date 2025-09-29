@@ -8,30 +8,30 @@ import {
 const services = [
   {
     icon: Video,
-    title: 'AI Video Ads',
-    description: 'Create compelling video advertisements powered by artificial intelligence. Our AI-driven approach produces high-converting video ads that capture attention and drive results for your business.',
-    features: ['AI-Generated Scripts', 'Automated Video Creation', 'Performance Optimization', 'Multi-Platform Ready'],
+    title: 'Video Marketing & AI Ads',
+    description: 'Professional video marketing services in Guwahati. Create compelling video advertisements powered by AI for local businesses. Our video marketing drives results across social media platforms.',
+    features: ['Local Video Production', 'AI-Generated Content', 'Social Media Videos', 'YouTube Marketing'],
     videoPlaceholder: 'ai-video-ads-explainer.mp4'
   },
   {
     icon: Bot,
-    title: 'Social Media Automation',
-    description: 'Automate your social media presence with intelligent AI-powered tools. Schedule, create, and manage your social media content across all platforms while maintaining authentic engagement.',
-    features: ['Automated Posting', 'Content Generation', 'Engagement Analytics', 'Multi-Platform Management'],
+    title: 'Social Media Marketing Guwahati',
+    description: 'Expert social media marketing services in Guwahati. Grow your local business with targeted Facebook, Instagram & LinkedIn campaigns. Automated posting and engagement for Assam businesses.',
+    features: ['Facebook Marketing', 'Instagram Growth', 'Local Audience Targeting', 'Content Creation'],
     videoPlaceholder: 'social-media-automation-explainer.mp4'
   },
   {
     icon: Globe,
-    title: 'AI Powered Websites',
-    description: 'Build intelligent websites that adapt and respond to your visitors. Our AI-powered websites provide personalized user experiences, automated customer support, and dynamic content optimization.',
-    features: ['Personalized User Experience', 'AI Chatbots', 'Dynamic Content', 'Smart Analytics'],
+    title: 'Website Development Guwahati',
+    description: 'Professional website development services in Guwahati. Build responsive, SEO-optimized websites for local businesses. AI-powered features and mobile-friendly designs that convert visitors.',
+    features: ['Responsive Design', 'SEO Optimization', 'Local Business Focus', 'Mobile-First Approach'],
     videoPlaceholder: 'ai-powered-websites-explainer.mp4'
   },
   {
     icon: Zap,
-    title: 'Custom AI Powered Software',
-    description: 'Develop custom software solutions powered by artificial intelligence tailored to your specific business needs. From automation tools to intelligent data processing systems.',
-    features: ['Custom Development', 'AI Integration', 'Process Automation', 'Scalable Solutions'],
+    title: 'SEO Services Guwahati',
+    description: 'Professional SEO services in Guwahati to rank your business on Google. Local SEO optimization for Assam businesses. Increase online visibility and drive organic traffic.',
+    features: ['Local SEO', 'Google My Business', 'Keyword Optimization', 'Technical SEO'],
     videoPlaceholder: 'custom-ai-software-explainer.mp4'
   }
 ];

@@ -21,23 +21,23 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Grow Your Business with
+            #1 Digital Marketing Services in
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-              Digital Excellence
+              Guwahati, Assam
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100 leading-relaxed">
-            Transform your business with our comprehensive digital marketing solutions. 
-            From stunning websites to powerful marketing campaigns that helps your business to become more profitable.
+            Leading digital marketing agency in Guwahati offering expert SEO, social media marketing, 
+            website development & AI-powered solutions. Trusted by 500+ businesses across Assam and Northeast India.
           </p>
           
           {/* Business Explainer Video Section */}
           <div className="mb-16 w-full">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-3 sm:p-6 lg:p-8 border border-white/20 mx-2 sm:mx-4 lg:mx-0">
               <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">Watch Our Story</h3>
-                <p className="text-blue-100 text-lg sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">Learn how Ltabai transforms businesses with AI-powered solutions</p>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">Digital Marketing Success in Guwahati</h3>
+                <p className="text-blue-100 text-lg sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">See how we've helped Guwahati businesses grow with our digital marketing services</p>
               </div>
               
               <div className="w-full">
@@ -50,7 +50,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               
               <div className="text-center mt-6 sm:mt-8">
                 <p className="text-blue-200 text-base sm:text-lg lg:text-xl px-2 sm:px-4 lg:px-0">
-                  🎥 Discover how we've helped 500+ businesses grow with AI-powered solutions
+                  🎥 Discover how our digital marketing services have helped 500+ businesses in Guwahati and Northeast India
                 </p>
               </div>
             </div>
@@ -61,11 +61,11 @@ export default function Hero({ onGetStarted }: HeroProps) {
               onClick={onGetStarted}
               className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center"
             >
-              Get Free Consultation
+              Get Free Digital Marketing Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <div className="text-sm text-blue-200">
-              ✓ Free Strategy Session • ✓ No Commitment Required
+              ✓ Free Digital Marketing Strategy • ✓ Guwahati Local Experts
             </div>
           </div>
           
