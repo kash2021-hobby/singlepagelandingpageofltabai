@@ -260,7 +260,6 @@ Please follow up with this potential client ASAP! 🎯`;
                   <span>📱</span>
                   <span>Leads sent directly to: +91 9164060961</span>
                 </div>
-                
                 <p className="text-sm text-gray-500 mt-2">
                   * Required fields. We respect your privacy and will never share your information.
                 </p>
