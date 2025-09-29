@@ -52,7 +52,7 @@ export default function About() {
                       <IconComponent className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Trusted Partner</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
                       <p className="text-sm text-gray-600">{feature.description}</p>
                     </div>
                   </div>
