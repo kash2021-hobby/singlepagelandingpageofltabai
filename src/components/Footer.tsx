@@ -8,9 +8,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="/470684103_2153992445004137_800651311874232813_n.jpg" 
+                alt="Ltabai Logo" 
+                className="w-10 h-10 rounded-lg object-contain bg-white p-1"
+              />
               <span className="text-2xl font-bold">Ltabai</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
