@@ -92,9 +92,9 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 Please follow up with this potential client ASAP! 🎯`;
 
       // Create WhatsApp URL for direct messaging
-      const whatsappNumber = '916000683808'; // Your WhatsApp number with country code
+      const whatsappNumber = '6000683808'; // Your WhatsApp number with country code
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/91${whatsappNumber}?text=${encodedMessage}`;
       
       // Simulate processing time for better UX
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -122,7 +122,7 @@ Please follow up with this potential client ASAP! 🎯`;
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-      setErrorMessage('Something went wrong. Please try again or contact us directly at +91 6000683808.');
+      setErrorMessage('Something went wrong. Please try again or contact us directly at +91 9164060961.');
     } finally {
       setIsSubmitting(false);
     }
@@ -150,11 +150,6 @@ Please follow up with this potential client ASAP! 🎯`;
                 Your information has been sent to our WhatsApp! We'll contact you immediately 
                 to discuss how we can help grow your business.
               </p>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                <p className="text-green-700 text-sm">
-                  📱 WhatsApp message sent to +91 9164060961 with your details
-                </p>
-              </div>
               <button
                 onClick={() => setSubmitStatus('idle')}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -232,7 +227,7 @@ Please follow up with this potential client ASAP! 🎯`;
 
                   WhatsApp has opened with your details pre-filled. Please click the "Send\" button 
                   in WhatsApp to send us your information, and we'll contact you immediately!
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                   <span className="text-sm">{errorMessage}</span>
                 </div>
                     📱 WhatsApp opened with your details. Please click "Send" in WhatsApp to complete!
@@ -241,29 +236,21 @@ Please follow up with this potential client ASAP! 🎯`;
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? (
                     <>
                       <Loader className="w-5 h-5 mr-2 animate-spin" />
-                      Opening WhatsApp...
+                      Submitting...
                     </>
                   ) : (
                     <>
-                      📱 Open WhatsApp & Send Details
+                      Send Message
                       <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
                 </button>
                 
-                <div className="mt-4 text-center">
-                  <p className="text-sm text-gray-600 mb-2">
-                    ✅ WhatsApp will open with your details pre-filled
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Just click "Send" in WhatsApp to complete your request!
-                  </p>
-                </div>
                 <p className="text-sm text-gray-500 mt-2">
                   * Required fields. We respect your privacy and will never share your information.
                 </p>
