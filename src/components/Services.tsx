@@ -1,78 +1,38 @@
 import { 
-  Globe, 
-  Search, 
-  Share2, 
-  Target, 
-  PenTool, 
   Video,
-  Palette,
   Bot,
-  TrendingUp
+  Globe,
+  Zap
 } from 'lucide-react';
 
 const services = [
   {
-    icon: Globe,
-    title: 'Website Development',
-    description: 'Create stunning, responsive websites that convert visitors into customers. From simple landing pages to complex e-commerce platforms, we build digital experiences that drive results.',
-    features: ['Responsive Design', 'Fast Loading Speed', 'SEO Optimized', 'Mobile-First Approach'],
-    videoPlaceholder: 'website-development-explainer.mp4'
-  },
-  {
-    icon: Search,
-    title: 'Search Engine Optimization (SEO)',
-    description: 'Boost your online visibility and rank higher on Google with our proven SEO strategies. We help your business get found by customers actively searching for your services.',
-    features: ['Keyword Research', 'On-Page Optimization', 'Technical SEO', 'Local SEO'],
-    videoPlaceholder: 'seo-explainer.mp4'
-  },
-  {
-    icon: Share2,
-    title: 'Social Media Marketing',
-    description: 'Build a strong social media presence that engages your audience and drives business growth. We create compelling content and manage your social media campaigns across all platforms.',
-    features: ['Content Creation', 'Community Management', 'Paid Social Campaigns', 'Analytics & Reporting'],
-    videoPlaceholder: 'social-media-explainer.mp4'
-  },
-  {
-    icon: Target,
-    title: 'Google Ads',
-    description: 'Maximize your ROI with expertly managed Google Ads campaigns. We create targeted campaigns that reach your ideal customers at the right moment with the right message.',
-    features: ['Campaign Setup', 'Keyword Targeting', 'Ad Copy Creation', 'Performance Optimization'],
-    videoPlaceholder: 'google-ads-explainer.mp4'
-  },
-  {
-    icon: PenTool,
-    title: 'Content Marketing',
-    description: 'Create valuable, relevant content that attracts and engages your target audience. Our content marketing strategies help establish your brand as an industry authority.',
-    features: ['Blog Writing', 'Email Marketing', 'Content Strategy', 'Lead Magnets'],
-    videoPlaceholder: 'content-marketing-explainer.mp4'
-  },
-  {
-    icon: Palette,
-    title: 'Graphic Design',
-    description: 'Professional graphic design services that bring your brand to life. From logos to marketing materials, we create visually stunning designs that communicate your message effectively.',
-    features: ['Logo Design', 'Brand Identity', 'Marketing Materials', 'Social Media Graphics'],
-    videoPlaceholder: 'graphic-design-explainer.mp4'
-  },
-  {
     icon: Video,
-    title: 'Video Editing',
-    description: 'Professional video editing services to create engaging content for your marketing campaigns. We transform raw footage into compelling stories that captivate your audience.',
-    features: ['Professional Editing', 'Motion Graphics', 'Color Correction', 'Audio Enhancement'],
-    videoPlaceholder: 'video-editing-explainer.mp4'
+    title: 'AI Video Ads',
+    description: 'Create compelling video advertisements powered by artificial intelligence. Our AI-driven approach produces high-converting video ads that capture attention and drive results for your business.',
+    features: ['AI-Generated Scripts', 'Automated Video Creation', 'Performance Optimization', 'Multi-Platform Ready'],
+    videoPlaceholder: 'ai-video-ads-explainer.mp4'
   },
   {
     icon: Bot,
-    title: 'AI Solutions',
-    description: 'Leverage cutting-edge AI technology to automate processes and enhance your business operations. We implement AI solutions that save time and improve efficiency.',
-    features: ['Process Automation', 'AI Chatbots', 'Data Analysis', 'Custom AI Tools'],
-    videoPlaceholder: 'ai-solutions-explainer.mp4'
+    title: 'Social Media Automation',
+    description: 'Automate your social media presence with intelligent AI-powered tools. Schedule, create, and manage your social media content across all platforms while maintaining authentic engagement.',
+    features: ['Automated Posting', 'Content Generation', 'Engagement Analytics', 'Multi-Platform Management'],
+    videoPlaceholder: 'social-media-automation-explainer.mp4'
   },
   {
-    icon: TrendingUp,
-    title: 'Digital Marketing Strategy',
-    description: 'Comprehensive digital marketing strategies tailored to your business goals. We analyze your market, competitors, and audience to create winning strategies.',
-    features: ['Market Analysis', 'Competitor Research', 'Strategy Development', 'Performance Tracking'],
-    videoPlaceholder: 'digital-strategy-explainer.mp4'
+    icon: Globe,
+    title: 'AI Powered Websites',
+    description: 'Build intelligent websites that adapt and respond to your visitors. Our AI-powered websites provide personalized user experiences, automated customer support, and dynamic content optimization.',
+    features: ['Personalized User Experience', 'AI Chatbots', 'Dynamic Content', 'Smart Analytics'],
+    videoPlaceholder: 'ai-powered-websites-explainer.mp4'
+  },
+  {
+    icon: Zap,
+    title: 'Custom AI Powered Software',
+    description: 'Develop custom software solutions powered by artificial intelligence tailored to your specific business needs. From automation tools to intelligent data processing systems.',
+    features: ['Custom Development', 'AI Integration', 'Process Automation', 'Scalable Solutions'],
+    videoPlaceholder: 'custom-ai-software-explainer.mp4'
   }
 ];
 
@@ -91,6 +51,7 @@ export default function Services() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
