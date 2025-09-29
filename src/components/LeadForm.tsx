@@ -92,7 +92,7 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
 Please follow up with this potential client ASAP! 🎯`;
 
       // Create WhatsApp URL for direct messaging
-      const whatsappNumber = '6000683808'; // Your WhatsApp number
+      const whatsappNumber = '916000683808'; // Your WhatsApp number with country code
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
       
