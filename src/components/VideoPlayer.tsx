@@ -24,13 +24,13 @@ export default function VideoPlayer({ videoId, title, description }: VideoPlayer
   const youtubeUrl = `https://youtube.com/shorts/${videoId}`;
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4">
+    <div className="w-full max-w-7xl mx-auto px-1 sm:px-4">
       <div 
         className="w-full rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-gray-900 transform hover:scale-[1.01] transition-transform duration-300"
         style={{ 
-          aspectRatio: '16/10',
-          minHeight: '400px',
-          height: 'clamp(400px, 70vh, 700px)'
+          aspectRatio: '16/11',
+          minHeight: '500px',
+          height: 'clamp(500px, 80vh, 800px)'
         }}
       >
       {!isLoaded && !hasError ? (

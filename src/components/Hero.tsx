@@ -34,10 +34,10 @@ export default function Hero({ onGetStarted }: HeroProps) {
           
           {/* Business Explainer Video Section */}
           <div className="mb-16 w-full">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-3 sm:p-6 lg:p-8 border border-white/20 mx-2 sm:mx-4 lg:mx-0">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-2 sm:p-6 lg:p-8 border border-white/20 mx-1 sm:mx-4 lg:mx-0">
               <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">Digital Marketing Success in Guwahati</h3>
-                <p className="text-blue-100 text-lg sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">See how we've helped Guwahati businesses grow with our digital marketing services</p>
+                <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-2">Digital Marketing Success in Guwahati</h3>
+                <p className="text-blue-100 text-base sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">See how we've helped Guwahati businesses grow with our digital marketing services</p>
               </div>
               
               <div className="w-full">
@@ -49,7 +49,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               </div>
               
               <div className="text-center mt-6 sm:mt-8">
-                <p className="text-blue-200 text-base sm:text-lg lg:text-xl px-2 sm:px-4 lg:px-0">
+                <p className="text-blue-200 text-sm sm:text-lg lg:text-xl px-2 sm:px-4 lg:px-0">
                   🎥 Discover how our digital marketing services have helped 500+ businesses in Guwahati and Northeast India
                 </p>
               </div>
