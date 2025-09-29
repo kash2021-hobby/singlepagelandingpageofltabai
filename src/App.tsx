@@ -29,8 +29,8 @@ function App() {
         <Services />
         <WhatYouGet />
         <SuccessStories />
-        <GlobalReach />
         <About />
+        <GlobalReach />
         <LeadForm id="contact" />
       </main>
       <Footer />
