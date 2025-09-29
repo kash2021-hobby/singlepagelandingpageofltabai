@@ -79,33 +79,47 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
         timeStyle: 'short'
       });
 
-      // Format the message for WhatsApp
-      const message = `🚀 *New Lead from Ltabai Website*
+      // Create a shorter, more reliable message format
+      const message = `New Lead from Ltabai:
+Name: ${formData.name}
+Phone: +91${cleanPhone}
+Business: ${formData.businessName}
+Location: ${formData.location}
+Time: ${currentTime}`;
 
-👤 *Name:* ${formData.name}
-📱 *Phone:* +91 ${cleanPhone}
-🏢 *Business:* ${formData.businessName}
-📍 *Location:* ${formData.location}
-
-*Submitted:* ${currentTime}
-
-Please follow up with this potential client ASAP! 🎯`;
-
-      // Create WhatsApp URL with properly encoded message
+      // Create WhatsApp URL with simple encoding
       const whatsappNumber = '916000683808';
       
-      // Double encode the message for better compatibility
+      // Use simple URI encoding
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
       
-      console.log('📱 WhatsApp URL:', whatsappUrl);
-      console.log('💬 Message content:', message);
+      // Log for debugging
+      console.log('📱 WhatsApp URL length:', whatsappUrl.length);
+      console.log('💬 Message:', message);
+      console.log('🔗 Full URL:', whatsappUrl);
       
       // Simulate processing time for better UX
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Open WhatsApp with the formatted message
-      window.open(whatsappUrl, '_blank');
+      // Try multiple methods to ensure it works
+      try {
+        // Method 1: Direct window.open
+        const opened = window.open(whatsappUrl, '_blank');
+        if (!opened) {
+          // Method 2: Create a temporary link and click it
+          const link = document.createElement('a');
+          link.href = whatsappUrl;
+          link.target = '_blank';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      } catch (error) {
+        console.error('Error opening WhatsApp:', error);
+        // Fallback: redirect current window
+        window.location.href = whatsappUrl;
+      }
       
       // Show success message
       setSubmitStatus('success');
@@ -116,19 +130,12 @@ Please follow up with this potential client ASAP! 🎯`;
         location: ''
       });
       
-      console.log('✅ Lead submitted successfully:', {
-        name: formData.name,
-        phone: cleanPhone,
-        businessName: formData.businessName,
-        location: formData.location,
-        timestamp: currentTime,
-        messageLength: message.length
-      });
+      console.log('✅ Lead submitted successfully');
       
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-      setErrorMessage('Something went wrong. Please try again or contact us directly at https://wa.me/916000683808.');
+      setErrorMessage('Something went wrong. Please contact us directly at +91 6000683808.');
     } finally {
       setIsSubmitting(false);
     }
