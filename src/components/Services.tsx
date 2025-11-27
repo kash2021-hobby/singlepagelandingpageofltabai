@@ -64,7 +64,7 @@ export default function Services() {
                     // Video Marketing Service - Use the professional image
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
-                        src="/ChatGPT Image Sep 29, 2025, 06_56_35 PM.png"
+                        src="/video marketing.webp"
                         alt="Professional Video Marketing & AI Ads"
                         className="w-full h-full object-cover"
                       />

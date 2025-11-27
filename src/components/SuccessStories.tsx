@@ -11,7 +11,6 @@ const successStories = [
       timeframe: '6 months',
       metric: 'Online Consultations'
     },
-    testimonial: 'Ltabai revolutionized our patient engagement. The AI-powered solutions increased our online consultations by 300% in just 6 months.',
     testimonial: 'Ltab ai revolutionized our patient engagement. The AI-powered solutions increased our online consultations by 300% in just 6 months.',
     avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=64&h=64&fit=crop&crop=face'
   },
@@ -25,7 +24,6 @@ const successStories = [
       timeframe: '4 months',
       metric: 'Social Engagement'
     },
-    testimonial: 'The social media automation and AI video ads created by Ltabai transformed our brand presence completely.',
     testimonial: 'The social media automation and AI video ads created by Ltab ai transformed our brand presence completely.',
     avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face'
   },
@@ -39,7 +37,6 @@ const successStories = [
       timeframe: '8 months',
       metric: 'Online Sales'
     },
-    testimonial: 'Our online sales quadrupled after implementing Ltabai\'s AI-powered e-commerce solution. Incredible results!',
     testimonial: 'Our online sales quadrupled after implementing Ltab ai\'s AI-powered e-commerce solution. Incredible results!',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face'
   }
