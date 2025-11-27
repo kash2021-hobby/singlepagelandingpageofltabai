@@ -57,11 +57,11 @@ export default function Services() {
               <div
                 key={index}
                 className={`group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 ${
-                  index === 0 ? 'flex flex-col' : 'flex flex-col lg:flex-row gap-6 items-start'
+                  index === 0 || index === 1 ? 'flex flex-col' : 'flex flex-col lg:flex-row gap-6 items-start'
                 }`}
               >
                 {/* Video Section */}
-                <div className={index === 0 ? 'w-full mb-6' : 'w-full lg:w-1/2 flex-shrink-0'}>
+                <div className={index === 0 || index === 1 ? 'w-full mb-6' : 'w-full lg:w-1/2 flex-shrink-0'}>
                   {index === 0 ? (
                     // Video Marketing Service - Use the professional image
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
@@ -103,7 +103,7 @@ export default function Services() {
                 </div>
 
                 {/* Content Section */}
-                <div className={index === 0 ? 'w-full flex flex-col' : 'w-full lg:w-1/2 flex flex-col'}>
+                <div className={index === 0 || index === 1 ? 'w-full flex flex-col' : 'w-full lg:w-1/2 flex flex-col'}>
                   <div className="flex items-center mb-4">
                     <div className="bg-blue-100 p-3 rounded-xl group-hover:bg-blue-600 transition-colors duration-300 mr-4">
                       <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
