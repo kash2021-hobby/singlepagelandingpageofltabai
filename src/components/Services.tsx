@@ -73,7 +73,7 @@ export default function Services() {
                     // Social Media Marketing Service - Use the professional image
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
-                        src="/guwahati.png"
+                        src="/social media marketing.webp"
                         alt="Social Media Marketing Services in Guwahati"
                         className="w-full h-full object-cover"
                       />
