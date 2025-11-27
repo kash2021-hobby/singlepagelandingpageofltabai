@@ -80,7 +80,7 @@ export default function LeadForm({ id = "contact" }: LeadFormProps) {
       });
 
       // Create a shorter, more reliable message format
-      const message = `New Lead from Ltab ai:
+      const message = `New Lead from Ltab Ai:
 Name: ${formData.name}
 Phone: +91${cleanPhone}
 Business: ${formData.businessName}
