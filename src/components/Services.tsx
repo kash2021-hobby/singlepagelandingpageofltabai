@@ -82,7 +82,7 @@ export default function Services() {
                     // Website Development Service - Use the professional image
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
-                        src="/ChatGPT Image Sep 29, 2025, 07_13_01 PM.png"
+                        src="/website development.webp"
                         alt="Website Development Services in Guwahati"
                         className="w-full h-full object-cover"
                       />
