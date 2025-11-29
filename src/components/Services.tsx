@@ -92,7 +92,7 @@ export default function Services() {
                     // SEO Services - Use the professional image
                    <div className="rounded-xl h-48 sm:h-56 lg:h-64 relative overflow-hidden border border-blue-100">
                       <img
-                        src="/ChatGPT Image Sep 29, 2025, 07_16_53 PM.png"
+                        src="/seo services.webp"
                         alt="SEO Services in Northeast, India"
                        className="w-full h-full object-contain bg-gray-50"
                       />
