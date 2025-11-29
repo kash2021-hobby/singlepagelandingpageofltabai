@@ -158,10 +158,10 @@ Time: ${currentTime}`;
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to <span className="text-yellow-400">Dominate Guwahati's Digital Market</span>?
+            Ready to <span className="text-yellow-400">Dominate Northeast India's Digital Market</span>?
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Get a free digital marketing consultation for your Guwahati business. Discover how our proven 
+            Get a free digital marketing consultation for your Northeast India business. Discover how our proven 
             strategies can increase your online visibility and drive more customers. Contact us via WhatsApp now!
           </p>
         </div>

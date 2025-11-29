@@ -9,28 +9,28 @@ const services = [
   {
     icon: Video,
     title: 'Video Marketing & AI Ads',
-    description: 'Professional video marketing services in Guwahati. Create compelling video advertisements powered by AI for local businesses. Our video marketing drives results across social media platforms.',
+    description: 'Professional video marketing services in Northeast, India. Create compelling video advertisements powered by AI for local businesses. Our video marketing drives results across social media platforms.',
     features: ['Local Video Production', 'AI-Generated Content', 'Social Media Videos', 'YouTube Marketing'],
     videoPlaceholder: 'ai-video-ads-explainer.mp4'
   },
   {
     icon: Bot,
-    title: 'Social Media Marketing Guwahati',
-    description: 'Expert social media marketing services in Guwahati. Grow your local business with targeted Facebook, Instagram & LinkedIn campaigns. Automated posting and engagement for Assam businesses.',
+    title: 'Social Media Marketing Northeast, India',
+    description: 'Expert social media marketing services in Northeast, India. Grow your local business with targeted Facebook, Instagram & LinkedIn campaigns. Automated posting and engagement for Northeast India businesses.',
     features: ['Facebook Marketing', 'Instagram Growth', 'Local Audience Targeting', 'Content Creation'],
     videoPlaceholder: 'social-media-automation-explainer.mp4'
   },
   {
     icon: Globe,
-    title: 'Website Development Guwahati',
-    description: 'Professional website development services in Guwahati. Build responsive, SEO-optimized websites for local businesses. AI-powered features and mobile-friendly designs that convert visitors.',
+    title: 'Website Development Northeast, India',
+    description: 'Professional website development services in Northeast, India. Build responsive, SEO-optimized websites for local businesses. AI-powered features and mobile-friendly designs that convert visitors.',
     features: ['Responsive Design', 'SEO Optimization', 'Local Business Focus', 'Mobile-First Approach'],
     videoPlaceholder: 'ai-powered-websites-explainer.mp4'
   },
   {
     icon: Zap,
-    title: 'SEO Services Guwahati',
-    description: 'Professional SEO services in Guwahati to rank your business on Google. Local SEO optimization for Assam businesses. Increase online visibility and drive organic traffic.',
+    title: 'SEO Services Northeast, India',
+    description: 'Professional SEO services in Northeast, India to rank your business on Google. Local SEO optimization for Northeast India businesses. Increase online visibility and drive organic traffic.',
     features: ['Local SEO', 'Google My Business', 'Keyword Optimization', 'Technical SEO'],
     videoPlaceholder: 'custom-ai-software-explainer.mp4'
   }
@@ -74,7 +74,7 @@ export default function Services() {
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/social media marketing.webp"
-                        alt="Social Media Marketing Services in Guwahati"
+                        alt="Social Media Marketing Services in Northeast, India"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -83,7 +83,7 @@ export default function Services() {
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/website development.webp"
-                        alt="Website Development Services in Guwahati"
+                        alt="Website Development Services in Northeast, India"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -93,7 +93,7 @@ export default function Services() {
                     <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/ChatGPT Image Sep 29, 2025, 07_16_53 PM.png"
-                        alt="SEO Services in Guwahati"
+                        alt="SEO Services in Northeast, India"
                         className="w-full h-full object-cover"
                       />
                     </div>

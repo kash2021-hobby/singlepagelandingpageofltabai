@@ -23,21 +23,21 @@ export default function Hero({ onGetStarted }: HeroProps) {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             #1 Digital Marketing Services in
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-              Guwahati, Assam
+              Northeast, India
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100 leading-relaxed">
-            Leading digital marketing agency in Guwahati offering expert SEO, social media marketing, 
-            website development & AI-powered solutions. Trusted by 500+ businesses across Assam and Northeast India.
+            Leading digital marketing agency in Northeast, India offering expert SEO, social media marketing, 
+            website development & AI-powered solutions. Trusted by 500+ businesses across Northeast India.
           </p>
           
           {/* Business Explainer Video Section */}
           <div className="mb-8 sm:mb-16 w-full">
             <div className="bg-white/10 backdrop-blur-sm rounded-none sm:rounded-3xl p-1 sm:p-6 lg:p-8 border-0 sm:border border-white/20 mx-0 sm:mx-4 lg:mx-0">
               <div className="text-center mb-4 sm:mb-8">
-                <h3 className="text-xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 px-2">Digital Marketing Success in Guwahati</h3>
-                <p className="text-blue-100 text-sm sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">See how we've helped Guwahati businesses grow with our digital marketing services</p>
+                <h3 className="text-xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 px-2">Digital Marketing Success in Northeast, India</h3>
+                <p className="text-blue-100 text-sm sm:text-xl lg:text-2xl px-2 sm:px-4 lg:px-0">See how we've helped Northeast India businesses grow with our digital marketing services</p>
               </div>
               
               <div className="w-full">
@@ -50,7 +50,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               
               <div className="text-center mt-2 sm:mt-8">
                 <p className="text-blue-200 text-xs sm:text-lg lg:text-xl px-2 sm:px-4 lg:px-0">
-                  🎥 Discover how our digital marketing services have helped 500+ businesses in Guwahati and Northeast India
+                  🎥 Discover how our digital marketing services have helped 500+ businesses in Northeast India
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <div className="text-sm text-blue-200">
-              ✓ Free Digital Marketing Strategy • ✓ Guwahati Local Experts
+              ✓ Free Digital Marketing Strategy • ✓ Northeast India Local Experts
             </div>
           </div>
           
