@@ -62,39 +62,39 @@ export default function Services() {
                 <div className="w-full mb-6">
                   {index === 0 ? (
                     // Video Marketing Service - Use the professional image
-                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                   <div className="rounded-xl h-48 sm:h-56 lg:h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/video marketing.webp"
                         alt="Professional Video Marketing & AI Ads"
-                        className="w-full h-full object-cover"
+                       className="w-full h-full object-contain bg-gray-50"
                       />
                     </div>
                   ) : index === 1 ? (
                     // Social Media Marketing Service - Use the professional image
-                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                   <div className="rounded-xl h-48 sm:h-56 lg:h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/social media marketing.webp"
                         alt="Social Media Marketing Services in Northeast, India"
-                        className="w-full h-full object-cover"
+                       className="w-full h-full object-contain bg-gray-50"
                       />
                     </div>
                   ) : index === 2 ? (
                     // Website Development Service - Use the professional image
-                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                   <div className="rounded-xl h-48 sm:h-56 lg:h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/website development.webp"
                         alt="Website Development Services in Northeast, India"
-                        className="w-full h-full object-cover"
+                       className="w-full h-full object-contain bg-gray-50"
                       />
                     </div>
                   ) : (
                     // Other services - Keep the placeholder
                     // SEO Services - Use the professional image
-                    <div className="rounded-xl h-64 relative overflow-hidden border border-blue-100">
+                   <div className="rounded-xl h-48 sm:h-56 lg:h-64 relative overflow-hidden border border-blue-100">
                       <img
                         src="/ChatGPT Image Sep 29, 2025, 07_16_53 PM.png"
                         alt="SEO Services in Northeast, India"
-                        className="w-full h-full object-cover"
+                       className="w-full h-full object-contain bg-gray-50"
                       />
                     </div>
                   )}
