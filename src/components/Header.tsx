@@ -20,14 +20,19 @@ export default function Header({ onContactClick }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-2">
+          <a 
+            href="https://ltabai.in/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200"
+          >
             <img
               src="/470684103_2153992445004137_800651311874232813_n.jpg"
               alt="Ltab Ai Logo"
               className="w-10 h-10 rounded-lg object-contain"
             />
             <span className="text-2xl font-bold text-gray-900">Ltab Ai</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
